@@ -5,7 +5,7 @@
 2. autolayoutを上下・左右0にする。
 3. UItableViewCellを配置して、Identifierをcellに変える。
 
-<image src="./storyboard.png">
+<image src="./image/storyboard.png">
 
 ## ViewController.swift
 ```
@@ -83,4 +83,4 @@ extension ViewController: UITableViewDelegate {
 ```
 ## buildしたサンプルの画像
 
-<image src="./iPhone.png">
+<image src="./image/iPhone.png">
