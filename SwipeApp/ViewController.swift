@@ -62,7 +62,7 @@ extension ViewController: UITableViewDelegate {
           editAction.image = UIImage(named: "edit")
 
        // 削除処理
-        let deleteAction = UIContextualAction(style: .destructive, titleお: "削除") { (action, view, completionHandler) in
+          let deleteAction = UIContextualAction(style: .destructive, title: "削除") { (action, view, completionHandler) in
           //削除処理を記述
           print("削除がタップされた")
 
