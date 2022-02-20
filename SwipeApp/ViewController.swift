@@ -49,22 +49,28 @@ extension ViewController: UITableViewDelegate {
       func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
         // 編集処理
-        let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, view, completionHandler) in
+        let editAction = UIContextualAction(style: .normal, title: "編集") { (action, view, completionHandler) in
           // 編集処理を記述
-          print("Editがタップされた")
+          print("編集がタップされた")
 
         // 実行結果に関わらず記述
         completionHandler(true)
         }
+          // 編集ボタンの色を変更
+          editAction.backgroundColor = UIColor.systemBlue
+          // アクションボタンに画像を設定
+          editAction.image = UIImage(named: "edit")
 
        // 削除処理
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+        let deleteAction = UIContextualAction(style: .destructive, titleお: "削除") { (action, view, completionHandler) in
           //削除処理を記述
-          print("Deleteがタップされた")
+          print("削除がタップされた")
 
           // 実行結果に関わらず記述
           completionHandler(true)
         }
+          // アクションボタンに画像を設定
+          deleteAction.image = UIImage(named: "trash")
 
         // 定義したアクションをセット
         return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
